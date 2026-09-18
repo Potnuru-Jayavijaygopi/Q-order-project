@@ -1,0 +1,129 @@
+.check-email-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+}
+.check-email-card-container {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.check-email-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 8px 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+.check-email-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 32px 0;
+  text-align: center;
+  font-weight: 500;
+}
+.check-email-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.otp-inputs-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 28px;
+  width: 100%;
+}
+.otp-box-input {
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  background-color: #f3f4f6;
+  border: 2px solid transparent;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  text-align: center;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+.otp-box-input:focus,
+.otp-box-input.active-border {
+  border-color: #f97316;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15);
+}
+.pill-verify-btn {
+  width: 100%;
+  height: 54px;
+  border-radius: 9999px;
+  background-color: #f97316;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+}
+.pill-verify-btn:hover {
+  background-color: #ea580c;
+}
+.pill-verify-btn:active {
+  transform: scale(0.99);
+}
+.pill-send-again-btn {
+  width: 100%;
+  height: 54px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  color: #374151;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.pill-send-again-btn:hover {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+.dark-theme .check-email-page-wrapper {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+.dark-theme .check-email-title {
+  color: #ffffff !important;
+}
+.dark-theme .check-email-subtitle {
+  color: #9ca3af !important;
+}
+.dark-theme .otp-box-input {
+  background-color: #18181b !important;
+  border-color: #27272a !important;
+  color: #ffffff !important;
+}
+.dark-theme .otp-box-input:focus,
+.dark-theme .otp-box-input.active-border {
+  border-color: #f97316 !important;
+  background-color: #121212 !important;
+}
+.dark-theme .pill-send-again-btn {
+  background-color: #121212 !important;
+  border-color: #262626 !important;
+  color: #ffffff !important;
+}

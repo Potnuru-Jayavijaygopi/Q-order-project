@@ -1,0 +1,707 @@
+:root {
+  --primary-orange: #ff5200;
+  --primary-orange-hover: #e04800;
+  --orange-light: #fff2ec;
+  --bg-main: #ffffff;
+  --card-bg: #f3f4f6;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --border-color: #e5e7eb;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+}
+* {
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+.restaurant-home-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.restaurant-container {
+  width: 100%;
+  max-width: 100%; 
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+  padding-bottom: 100px;
+  transition: background-color 0.3s ease;
+}
+.home-content {
+  width: 100%;
+  flex: 1;
+  padding: 24px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.user-greeting h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-dark);
+  letter-spacing: -0.5px;
+}
+.notification-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease, background-color 0.2s;
+}
+.notification-btn:hover {
+  transform: scale(1.05);
+  background-color: #1f2937;
+}
+.notification-btn:active {
+  transform: scale(0.95);
+}
+.notification-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-orange);
+  border-radius: 50%;
+  border: 2px solid #111827;
+}
+.discount-banner {
+  width: 100%;
+  background: linear-gradient(135deg, #ff5200 0%, #ff6b1a 100%);
+  border-radius: var(--radius-xl);
+  padding: 24px 28px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(255, 82, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.discount-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(255, 82, 0, 0.28);
+}
+.banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.banner-title {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.banner-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+.banner-right {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+.action-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.action-card:hover {
+  background-color: #eaebed;
+  transform: translateY(-2px);
+}
+.action-card:active {
+  transform: scale(0.98);
+}
+.action-icon {
+  color: var(--primary-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.revenue-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+.revenue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.revenue-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-dark);
+}
+.see-details-btn {
+  background: none;
+  border: none;
+  color: var(--primary-orange);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+.see-details-btn:hover {
+  opacity: 0.8;
+}
+.revenue-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.revenue-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.total-revenue-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.revenue-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.revenue-amount {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary-orange);
+}
+.period-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.period-dropdown:hover {
+  border-color: #d1d5db;
+}
+.chart-container {
+  display: flex;
+  position: relative;
+  height: 180px;
+  width: 100%;
+  margin-top: 10px;
+}
+.chart-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  height: 140px;
+}
+.chart-bars-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.chart-grid-lines {
+  position: absolute;
+  top: 0;
+  left: 36px;
+  right: 0;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.grid-line {
+  width: 100%;
+  height: 1px;
+  background-color: #e2e8f0;
+}
+.chart-bars {
+  height: 140px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+  padding-left: 10px;
+}
+.bar-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+  width: 12%;
+  cursor: pointer;
+}
+.bar-fill {
+  width: 100%;
+  max-width: 32px;
+  background-color: var(--primary-orange);
+  border-radius: 6px 6px 0 0;
+  transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s;
+}
+.bar-column:hover .bar-fill {
+  background-color: #ff6e26;
+  box-shadow: 0 4px 12px rgba(255, 82, 0, 0.4);
+}
+.bar-tooltip {
+  position: absolute;
+  top: -30px;
+  background: #111827;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateY(4px);
+  z-index: 10;
+}
+.bar-column:hover .bar-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+.chart-x-axis {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 36px;
+  margin-top: 10px;
+}
+.x-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+  width: 12%;
+}
+.x-label.today {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%; 
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 24px 16px 24px;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  margin: 0;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+.nav-item.active {
+  color: var(--primary-orange);
+  font-weight: 700;
+}
+.nav-item:hover {
+  color: var(--primary-orange);
+}
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-icon svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+.nav-item:hover .nav-icon svg {
+  transform: translateY(-2px);
+}
+.nav-item-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  margin-top: -28px;
+}
+.add-btn-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: var(--primary-orange);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(255, 82, 0, 0.45);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.add-btn-circle svg {
+  width: 30px;
+  height: 30px;
+}
+.nav-item-add:hover .add-btn-circle {
+  transform: scale(1.1);
+  background-color: var(--primary-orange-hover);
+}
+.nav-item-add:active .add-btn-circle {
+  transform: scale(0.95);
+}
+@media (min-width: 769px) {
+  .home-content {
+    padding: 40px 64px 60px 64px;
+    gap: 32px;
+  }
+  .user-greeting h1 {
+    font-size: 38px;
+  }
+  .notification-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+  }
+  .notification-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+  .discount-banner {
+    padding: 40px 60px;
+    border-radius: 28px;
+  }
+  .banner-title {
+    font-size: 32px;
+  }
+  .banner-subtitle {
+    font-size: 22px;
+  }
+  .banner-right {
+    font-size: 64px;
+  }
+  .action-grid {
+    gap: 24px;
+  }
+  .action-card {
+    padding: 24px 32px;
+    font-size: 18px;
+    border-radius: 22px;
+  }
+  .action-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+  .revenue-card {
+    padding: 36px 48px;
+    border-radius: 30px;
+  }
+  .revenue-title {
+    font-size: 24px;
+  }
+  .see-details-btn {
+    font-size: 16px;
+  }
+  .revenue-amount {
+    font-size: 36px;
+  }
+  .period-dropdown {
+    padding: 8px 18px;
+    font-size: 15px;
+    border-radius: 24px;
+  }
+  .chart-container {
+    height: 260px;
+  }
+  .chart-y-axis, .chart-grid-lines, .chart-bars {
+    height: 210px;
+  }
+  .chart-y-axis {
+    font-size: 14px;
+  }
+  .x-label {
+    font-size: 14px;
+  }
+  .bar-fill {
+    max-width: 54px;
+    border-radius: 10px 10px 0 0;
+  }
+  .bottom-nav {
+    padding: 14px 64px 18px 64px;
+    border-top: 2px solid #f0f0f0;
+  }
+  .nav-item {
+    font-size: 15px;
+    gap: 6px;
+  }
+  .nav-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  .nav-item-add {
+    font-size: 15px;
+    margin-top: -34px;
+  }
+  .add-btn-circle {
+    width: 66px;
+    height: 66px;
+    box-shadow: 0 10px 24px rgba(255, 82, 0, 0.5);
+  }
+  .add-btn-circle svg {
+    width: 34px;
+    height: 34px;
+  }
+}
+.restaurant-home-wrapper.dark-theme,
+.restaurant-home-wrapper.dark-theme .restaurant-container {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+.restaurant-home-wrapper.dark-theme .user-greeting h1,
+.restaurant-home-wrapper.dark-theme .revenue-title,
+.restaurant-home-wrapper.dark-theme .menu-title,
+.restaurant-home-wrapper.dark-theme .notification-title,
+.restaurant-home-wrapper.dark-theme .add-title,
+.restaurant-home-wrapper.dark-theme .edit-title,
+.restaurant-home-wrapper.dark-theme .profile-title,
+.restaurant-home-wrapper.dark-theme .chef-title,
+.restaurant-home-wrapper.dark-theme .create-chef-title,
+.restaurant-home-wrapper.dark-theme .edit-profile-title,
+.restaurant-home-wrapper.dark-theme .order-history-title,
+.restaurant-home-wrapper.dark-theme .settings-title,
+.restaurant-home-wrapper.dark-theme .password-title,
+.restaurant-home-wrapper.dark-theme .support-title,
+.restaurant-home-wrapper.dark-theme .policy-title,
+.restaurant-home-wrapper.dark-theme .user-name-text,
+.restaurant-home-wrapper.dark-theme .section-group-title,
+.restaurant-home-wrapper.dark-theme .menu-item-text,
+.restaurant-home-wrapper.dark-theme .customer-name,
+.restaurant-home-wrapper.dark-theme .form-label,
+.restaurant-home-wrapper.dark-theme .sheet-title,
+.restaurant-home-wrapper.dark-theme .settings-card,
+.restaurant-home-wrapper.dark-theme .back-btn,
+.restaurant-home-wrapper.dark-theme .custom-select-trigger,
+.restaurant-home-wrapper.dark-theme .profile-modal-title {
+  color: #ffffff !important;
+}
+.restaurant-home-wrapper.dark-theme .action-card,
+.restaurant-home-wrapper.dark-theme .revenue-card,
+.restaurant-home-wrapper.dark-theme .menu-table-header,
+.restaurant-home-wrapper.dark-theme .user-profile-card,
+.restaurant-home-wrapper.dark-theme .profile-menu-card,
+.restaurant-home-wrapper.dark-theme .chef-table-header,
+.restaurant-home-wrapper.dark-theme .chef-search-input,
+.restaurant-home-wrapper.dark-theme .photo-upload-box,
+.restaurant-home-wrapper.dark-theme .history-order-card,
+.restaurant-home-wrapper.dark-theme .order-card,
+.restaurant-home-wrapper.dark-theme .settings-card,
+.restaurant-home-wrapper.dark-theme .orders-modal-sheet,
+.restaurant-home-wrapper.dark-theme .date-pill,
+.restaurant-home-wrapper.dark-theme .period-dropdown {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border-color: #262626 !important;
+}
+.restaurant-home-wrapper.dark-theme .input-orange,
+.restaurant-home-wrapper.dark-theme .select-orange,
+.restaurant-home-wrapper.dark-theme .textarea-orange,
+.restaurant-home-wrapper.dark-theme .input-gray-outline,
+.restaurant-home-wrapper.dark-theme .select-gray,
+.restaurant-home-wrapper.dark-theme .textarea-gray-outline,
+.restaurant-home-wrapper.dark-theme .input-orange-profile,
+.restaurant-home-wrapper.dark-theme .select-orange-profile,
+.restaurant-home-wrapper.dark-theme .input-orange-chef,
+.restaurant-home-wrapper.dark-theme .input-password-outline,
+.restaurant-home-wrapper.dark-theme .textarea-gray-support,
+.restaurant-home-wrapper.dark-theme .select-orange-support,
+.restaurant-home-wrapper.dark-theme .custom-select-trigger {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border-color: #333333 !important;
+}
+.restaurant-home-wrapper.dark-theme .bottom-nav {
+  background-color: #121212 !important;
+  border-top-color: #262626 !important;
+}
+.restaurant-home-wrapper.dark-theme .grid-line {
+  background-color: #262626 !important;
+}
+.restaurant-home-wrapper.dark-theme .menu-item-row,
+.restaurant-home-wrapper.dark-theme .chef-item-row,
+.restaurant-home-wrapper.dark-theme .cuisines-item-row,
+.restaurant-home-wrapper.dark-theme .misc-item-row,
+.restaurant-home-wrapper.dark-theme .recipes-item-row,
+.restaurant-home-wrapper.dark-theme .item-master-row,
+.restaurant-home-wrapper.dark-theme .notification-item-row,
+.restaurant-home-wrapper.dark-theme .profile-menu-item {
+  border-bottom-color: #262626 !important;
+}
+.restaurant-home-wrapper.dark-theme .item-name,
+.restaurant-home-wrapper.dark-theme .item-price,
+.restaurant-home-wrapper.dark-theme .chef-name,
+.restaurant-home-wrapper.dark-theme .cuisines-name,
+.restaurant-home-wrapper.dark-theme .cuisines-title,
+.restaurant-home-wrapper.dark-theme .create-cuisine-title,
+.restaurant-home-wrapper.dark-theme .misc-title,
+.restaurant-home-wrapper.dark-theme .misc-item-name,
+.restaurant-home-wrapper.dark-theme .misc-item-price,
+.restaurant-home-wrapper.dark-theme .recipes-title,
+.restaurant-home-wrapper.dark-theme .recipes-name,
+.restaurant-home-wrapper.dark-theme .item-master-title,
+.restaurant-home-wrapper.dark-theme .item-master-name,
+.restaurant-home-wrapper.dark-theme .item-master-unit,
+.restaurant-home-wrapper.dark-theme .item-master-stock,
+.restaurant-home-wrapper.dark-theme .notification-item-title,
+.restaurant-home-wrapper.dark-theme .policy-item-heading {
+  color: #ffffff !important;
+}
+.restaurant-home-wrapper.dark-theme .support-dropdown-menu,
+.restaurant-home-wrapper.dark-theme .profile-modal-box,
+.restaurant-home-wrapper.dark-theme .cuisines-table-header,
+.restaurant-home-wrapper.dark-theme .cuisines-search-input,
+.restaurant-home-wrapper.dark-theme .misc-table-header,
+.restaurant-home-wrapper.dark-theme .recipes-table-header,
+.restaurant-home-wrapper.dark-theme .item-master-table-header,
+.restaurant-home-wrapper.dark-theme .item-master-search-input,
+.restaurant-home-wrapper.dark-theme .add-material-divider-box {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border-color: #262626 !important;
+}
+.restaurant-home-wrapper.dark-theme .support-dropdown-option {
+  color: #ffffff !important;
+}
+.restaurant-home-wrapper.dark-theme .support-dropdown-option.selected,
+.restaurant-home-wrapper.dark-theme .support-dropdown-option:hover {
+  background-color: #262626 !important;
+}
+.restaurant-home-wrapper.dark-theme .policy-header,
+.restaurant-home-wrapper.dark-theme .recipes-header,
+.restaurant-home-wrapper.dark-theme .misc-header,
+.restaurant-home-wrapper.dark-theme .cuisines-header,
+.restaurant-home-wrapper.dark-theme .item-master-header,
+.restaurant-home-wrapper.dark-theme .create-cuisine-header {
+  background-color: #000000 !important;
+}
+.restaurant-home-wrapper.dark-theme .order-details-wrapper {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+.restaurant-home-wrapper.dark-theme .header-page-title,
+.restaurant-home-wrapper.dark-theme .section-heading,
+.restaurant-home-wrapper.dark-theme .detail-value,
+.restaurant-home-wrapper.dark-theme .item-name {
+  color: #ffffff !important;
+}
+.restaurant-home-wrapper.dark-theme .order-details-header .back-btn {
+  color: #ffffff !important;
+}
+.restaurant-home-wrapper.dark-theme .order-details-card,
+.restaurant-home-wrapper.dark-theme .order-item-card {
+  background-color: #121212 !important;
+  border: 1px solid #262626 !important;
+}
+.restaurant-home-wrapper.dark-theme .download-invoice-btn {
+  background-color: #1a1a1a !important;
+  border-color: #333333 !important;
+  color: #ffffff !important;
+}
+.restaurant-home-wrapper.dark-theme .detail-label,
+.restaurant-home-wrapper.dark-theme .total-label {
+  color: #9ca3af !important;
+}
+.restaurant-home-wrapper.dark-theme .val-text {
+  color: #d1d5db !important;
+}
+.restaurant-home-wrapper.dark-theme .card-dashed-divider {
+  border-top-color: #333333 !important;
+}

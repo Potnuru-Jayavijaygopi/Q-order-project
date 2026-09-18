@@ -1,0 +1,86 @@
+
+.running-orders-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  animation: fadeInOverlay 0.25s ease forwards;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.running-orders-modal-sheet {
+  width: 100%;
+  max-width: 500px;
+  max-height: 85vh;
+  background-color: #ffffff;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+  padding: 12px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  animation: slideUpSheet 0.3s ease forwards;
+}
+
+@keyframes slideUpSheet {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.sheet-drag-handle-bar {
+  width: 44px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #d1d5db;
+  align-self: center;
+  margin-bottom: 4px;
+}
+
+.sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sheet-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+
+.sheet-orders-scroll-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  max-height: 70vh;
+  padding-bottom: 20px;
+}
+
+.dark-theme .running-orders-modal-sheet {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border: 1px solid #262626;
+}
+
+.dark-theme .sheet-title {
+  color: #ffffff !important;
+}
+
+.dark-theme .sheet-drag-handle-bar {
+  background-color: #3f3f46 !important;
+}

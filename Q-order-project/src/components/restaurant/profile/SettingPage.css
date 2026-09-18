@@ -1,0 +1,205 @@
+.settings-page-content {
+  width: 100%;
+  flex: 1;
+  padding: 24px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.settings-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding-bottom: 8px;
+}
+.settings-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.settings-card {
+  background-color: #f3f4f6;
+  border-radius: 18px;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  position: relative;
+  border: none;
+}
+.settings-card:hover {
+  background-color: #eaebed;
+}
+.toggle-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 26px;
+  flex-shrink: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: background-color 0.3s ease;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+input:checked + .slider {
+  background-color: #ff5200;
+}
+input:checked + .slider:before {
+  transform: translateY(-50%) translateX(22px);
+}
+.language-card-wrapper {
+  position: relative;
+  width: 100%;
+}
+.language-dropdown-menu {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #f1f5f9;
+  overflow: hidden;
+  z-index: 100;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+}
+.language-option {
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+.language-option:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+.language-option.active {
+  background-color: #d1d5db;
+  color: #111827;
+  font-weight: 700;
+}
+@media (min-width: 769px) {
+  .settings-page-content {
+    padding: 40px 64px 80px 64px;
+    max-width: 900px;
+    gap: 28px;
+  }
+  .settings-title {
+    font-size: 34px;
+  }
+  .settings-card {
+    padding: 22px 32px;
+    font-size: 18px;
+    border-radius: 22px;
+  }
+  .toggle-switch {
+    width: 52px;
+    height: 30px;
+  }
+  .slider:before {
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  input:checked + .slider:before {
+    transform: translateY(-50%) translateX(22px);
+  }
+}
+.dark-theme .settings-page-content {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+.dark-theme .settings-title {
+  color: #ffffff !important;
+}
+.dark-theme .back-btn {
+  color: #ffffff !important;
+}
+.dark-theme .back-btn:hover {
+  background-color: #1a1a1a !important;
+}
+.dark-theme .settings-card {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border: 1px solid #262626;
+}
+.dark-theme .settings-card:hover {
+  background-color: #1f1f1f !important;
+}
+.dark-theme .slider {
+  background-color: #334155;
+}
+.dark-theme input:checked + .slider {
+  background-color: #ff5200;
+}
+.dark-theme .language-dropdown-menu {
+  background-color: #18181b !important;
+  border: 1px solid #27272a;
+}
+.dark-theme .language-option {
+  color: #e4e4e7 !important;
+}
+.dark-theme .language-option:hover {
+  background-color: #27272a !important;
+  color: #ffffff !important;
+}
+.dark-theme .language-option.active {
+  background-color: #3f3f46 !important;
+  color: #ffffff !important;
+}
