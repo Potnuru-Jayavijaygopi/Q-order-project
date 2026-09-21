@@ -1,0 +1,156 @@
+.cuisines-page-content {
+  width: 100%;
+  flex: 1;
+  padding: 24px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cuisines-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background-color: #ffffff;
+  padding: 12px 0;
+  margin-top: -12px;
+}
+.cuisines-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cuisines-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+.create-cuisine-btn {
+  background-color: #ff5200;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(255, 82, 0, 0.3);
+  transition: all 0.2s ease;
+}
+.create-cuisine-btn:hover {
+  background-color: #e04800;
+  transform: translateY(-1px);
+}
+.create-cuisine-btn:active {
+  transform: scale(0.97);
+}
+.cuisines-search-container {
+  width: 100%;
+  position: relative;
+}
+.cuisines-search-input {
+  width: 100%;
+  padding: 14px 20px 14px 48px;
+  border-radius: 24px;
+  border: none;
+  background-color: #f3f4f6;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+.cuisines-search-input::placeholder {
+  color: #9ca3af;
+}
+.cuisines-search-input:focus {
+  background-color: #eaecef;
+}
+.cuisines-table-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cuisines-table-header {
+  background-color: #f3f4f6;
+  border-radius: 16px;
+  padding: 14px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #111827;
+}
+.cuisines-items-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.cuisines-item-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background-color 0.2s ease;
+}
+.cuisines-item-row:hover {
+  background-color: #f8fafc;
+}
+.cuisines-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #64748b;
+}
+.cuisines-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+}
+.empty-cuisines {
+  text-align: center;
+  padding: 40px 20px;
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 600;
+}
+@media (min-width: 769px) {
+  .cuisines-page-content {
+    padding: 40px 64px 80px 64px;
+    gap: 28px;
+  }
+  .cuisines-title {
+    font-size: 34px;
+  }
+  .create-cuisine-btn {
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 14px;
+  }
+  .cuisines-search-input {
+    padding: 16px 24px 16px 54px;
+    font-size: 16px;
+    border-radius: 28px;
+  }
+  .cuisines-table-header {
+    padding: 18px 28px;
+    font-size: 17px;
+    border-radius: 20px;
+  }
+  .cuisines-item-row {
+    padding: 20px 28px;
+  }
+  .cuisines-name {
+    font-size: 17px;
+  }
+}
