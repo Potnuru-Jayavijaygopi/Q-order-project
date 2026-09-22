@@ -1,0 +1,122 @@
+.student-select-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+}
+.student-select-card-container {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.student-select-back-btn {
+  position: absolute;
+  left: 0;
+  top: -36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #111827;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.student-select-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 8px 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+.student-select-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 36px 0;
+  text-align: center;
+  font-weight: 500;
+}
+.student-select-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.student-select-form .input-field-group {
+  position: relative;
+  width: 100%;
+}
+.student-select-form .pill-input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 54px;
+  border-radius: 9999px;
+  border: 1.5px solid #fed7aa;
+  background-color: #ffffff;
+  padding: 0 46px 0 22px;
+  font-size: 15px;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.student-select-form .pill-select.placeholder-active {
+  color: #9ca3af;
+}
+.student-select-form .pill-input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+}
+.student-select-form .input-right-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+.pill-submit-btn {
+  width: 100%;
+  height: 54px;
+  border-radius: 9999px;
+  background-color: #f97316;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.3);
+}
+.pill-submit-btn:hover {
+  background-color: #ea580c;
+}
+.pill-submit-btn:active {
+  transform: scale(0.99);
+}
+.dark-theme .student-select-page-wrapper {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+.dark-theme .student-select-title,
+.dark-theme .student-select-back-btn {
+  color: #ffffff !important;
+}
+.dark-theme .student-select-subtitle {
+  color: #9ca3af !important;
+}
+.dark-theme .student-select-form .pill-input {
+  background-color: #121212 !important;
+  border-color: #333333 !important;
+  color: #ffffff !important;
+}

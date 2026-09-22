@@ -1,0 +1,232 @@
+
+.chef-my-orders-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.chef-my-orders-container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0;
+  padding: 24px 20px 60px 20px;
+  gap: 24px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.chef-my-orders-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.chef-back-btn {
+  background: none;
+  border: none;
+  color: #111827;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.chef-back-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.chef-my-orders-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.chef-orders-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+
+.chef-card-box {
+  width: 100%;
+  background-color: #f3f4f6;
+  border-radius: 20px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.meta-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.meta-value.bold-dark {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.parcel-orange-badge {
+  background-color: #ff5200;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.chef-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.chef-item-card {
+  width: 100%;
+  background-color: #f3f4f6;
+  border-radius: 20px;
+  padding: 14px;
+  display: flex;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.item-img-wrapper {
+  width: 82px;
+  height: 82px;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.item-food-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.item-details-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.item-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.item-sub-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.red-label {
+  color: #ea580c;
+  font-weight: 700;
+}
+
+.gray-subtext {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.item-card-price {
+  font-size: 18px;
+  font-weight: 900;
+  color: #ff5200;
+  margin-top: 4px;
+}
+
+@media (min-width: 769px) {
+  .chef-my-orders-container {
+    padding: 40px 64px 80px 64px;
+    gap: 28px;
+  }
+
+  .chef-my-orders-title {
+    font-size: 38px;
+  }
+
+  .chef-card-box {
+    padding: 24px 28px;
+    border-radius: 24px;
+  }
+
+  .chef-item-card {
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .item-img-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.dark-theme .chef-my-orders-page-wrapper,
+.dark-theme .chef-my-orders-container {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .chef-my-orders-title,
+.dark-theme .chef-back-btn,
+.dark-theme .section-title,
+.dark-theme .meta-value.bold-dark,
+.dark-theme .item-title {
+  color: #ffffff !important;
+}
+
+.dark-theme .chef-back-btn:hover {
+  background-color: #1a1a1a !important;
+}
+
+.dark-theme .chef-card-box,
+.dark-theme .chef-item-card {
+  background-color: #121212 !important;
+  border: 1px solid #262626;
+}
